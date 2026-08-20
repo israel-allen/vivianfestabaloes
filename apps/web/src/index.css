@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Outfit", sans-serif;
+  overflow-x: clip;
+}
+
+@layer base {
+  :root {
+    --background: 36 60% 98%;
+    --foreground: 340 25% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 25% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 25% 16%;
+    --primary: 340 62% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 32 70% 92%;
+    --secondary-foreground: 340 30% 22%;
+    --muted: 34 40% 94%;
+    --muted-foreground: 340 10% 45%;
+    --accent: 172 45% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 34 30% 88%;
+    --input: 34 30% 88%;
+    --ring: 340 62% 52%;
+    --radius: 1.25rem;
+    --gold: 38 62% 58%;
+  }
+  .dark {
+    --background: 340 22% 8%;
+    --foreground: 36 40% 96%;
+    --card: 340 20% 12%;
+    --card-foreground: 36 40% 96%;
+    --popover: 340 20% 12%;
+    --popover-foreground: 36 40% 96%;
+    --primary: 340 70% 62%;
+    --primary-foreground: 340 25% 10%;
+    --secondary: 340 15% 20%;
+    --secondary-foreground: 36 40% 96%;
+    --muted: 340 15% 18%;
+    --muted-foreground: 36 15% 70%;
+    --accent: 172 45% 50%;
+    --accent-foreground: 340 25% 10%;
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 15% 22%;
+    --input: 340 15% 22%;
+    --ring: 340 70% 62%;
+  }
+}
+
+@layer base {
+  .font-display {
+    font-family: "Fraunces", Georgia, serif;
+  }
+}
+
+@layer components {
+  .marker-underline {
+    background-image: linear-gradient(transparent 62%, hsl(var(--gold) / 0.45) 62%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
+
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee-x 28s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow, .animate-marquee { animation: none; }
+}
