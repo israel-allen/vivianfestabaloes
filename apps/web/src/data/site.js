@@ -486,6 +486,35 @@ export const portfolio = [
     image: '/images/aniv-azul-dourado-80.jpg',
     span: 'wide',
   },
+  {
+    id: 67,
+    title: 'Laço de Balões',
+    category: 'aniversario',
+    place: 'Aniversário',
+    image: '/images/laço.jpeg',
+    span: 'wide',
+  },
+  {
+    id: 68,
+    title: 'Laço de Balões em Detalhe',
+    category: 'aniversario',
+    place: 'Aniversário',
+    image: '/images/laço2.jpeg',
+  },
+  {
+    id: 69,
+    title: 'Laço de Balões em Close',
+    category: 'aniversario',
+    place: 'Aniversário',
+    image: '/images/laço3.jpeg',
+  },
+  {
+    id: 70,
+    title: 'Cerveja',
+    category: 'aniversario',
+    place: 'Aniversário',
+    image: '/images/cerveja.jpeg',
+  },
 ];
 
 export const services = [

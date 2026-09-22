@@ -10,6 +10,8 @@ const ticker = ['Casamentos', 'Festas Infantis', 'Corporativo', 'Chá de Bebê',
 
 export default function HomePage() {
   const destaques = portfolio.slice(0, 7);
+  const heroImage = portfolio.find((item) => item.title === 'Laço de Balões')?.image ?? portfolio[0].image;
+
   return (
     <>
       <Helmet>
@@ -23,8 +25,8 @@ export default function HomePage() {
       {/* Hero full-bleed */}
       <section className="relative min-h-[100dvh] w-full overflow-hidden">
         <img
-          src={portfolio[0].image}
-          alt="Arco de balões em tons blush e dourado na entrada de um casamento"
+          src={heroImage}
+          alt="Laço de balões como destaque principal na página inicial"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2a1620]/90 via-[#2a1620]/45 to-[#2a1620]/25" />
